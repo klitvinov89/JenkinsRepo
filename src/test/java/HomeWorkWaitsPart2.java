@@ -34,7 +34,8 @@ public class HomeWorkWaitsPart2 {
         driver.findElement(By.xpath("//*[text()='Ключове слово']")).click();
         driver.findElement(By.xpath("//*[@class='block block-query' and .//*[text()='Ключове слово']]//input")).sendKeys("тест");
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()='Знайдено: ']")));
+//        WebElement element =
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()='Знайдено: ']")));
         driver.findElement(By.xpath("(//*[@class='items-list']//*[@class='items-list--header'])[1]")).click();
         Boolean bool = false;
         if(driver.findElements(By.xpath("//*[contains(text(),'тест')]")).size() != 0){
@@ -53,7 +54,8 @@ public class HomeWorkWaitsPart2 {
         driver.findElement(By.xpath("//*[@class='block block-value' and .//*[text()='Вартість']]//input[@class='value from']")).sendKeys("1000");
         driver.findElement(By.xpath("//*[@class='block block-value' and .//*[text()='Вартість']]//input[@class='value to']")).sendKeys("10000");
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()='Знайдено: ']")));
+//        WebElement element =
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()='Знайдено: ']")));
         driver.findElement(By.xpath("(//*[@class='items-list']//*[@class='items-list--header'])[1]")).click();
         double price = 0;
         String textPrice = driver.findElement(By.xpath("//*[@class='green tender--description--cost--number']//strong")).getText();
@@ -73,12 +75,14 @@ public class HomeWorkWaitsPart2 {
         driver.get("https://prozorro.gov.ua/tender/search/");
         Actions action = new Actions(driver);
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()='Регіон']")));
+//        WebElement element =
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()='Регіон']")));
         driver.findElement(By.xpath("//*[text()='Регіон']")).click();
         WebElement we = driver.findElement(By.xpath("//*[@class='selectize-dropdown-content']//div[contains(text(),'Луганська область')]"));
         action.moveToElement(we).perform();
         driver.findElement(By.xpath("//*[@class='selectize-dropdown-content']//div[contains(text(),'Луганська область')]")).click();
-        WebElement element1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()='Знайдено: ']")));
+//        WebElement element1 =
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()='Знайдено: ']")));
         driver.findElement(By.xpath("(//*[@class='items-list']//*[@class='items-list--header'])[1]")).click();
         Boolean bool = false;
         if(driver.findElements(By.xpath("//*[contains(text(),'Луганська')]")).size() != 0){
@@ -95,12 +99,14 @@ public class HomeWorkWaitsPart2 {
         driver.get("https://prozorro.gov.ua/tender/search/");
         Actions action = new Actions(driver);
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()='Статус']")));
+//        WebElement element =
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()='Статус']")));
         driver.findElement(By.xpath("//*[text()='Статус']")).click();
         WebElement we = driver.findElement(By.xpath("//*[@class='selectize-dropdown-content']//div[contains(text(),'Період уточнень')]"));
         action.moveToElement(we).perform();
         driver.findElement(By.xpath("//*[@class='selectize-dropdown-content']//div[contains(text(),'Період уточнень')]")).click();
-        WebElement element1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()='Знайдено: ']")));
+//        WebElement element1 =
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()='Знайдено: ']")));
         driver.findElement(By.xpath("(//*[@class='items-list']//*[@class='items-list--header'])[1]")).click();
         Boolean bool = false;
         if(driver.findElements(By.xpath("//*[contains(text(),'Період уточнень')]")).size() != 0){
@@ -117,12 +123,14 @@ public class HomeWorkWaitsPart2 {
         driver.get("https://prozorro.gov.ua/tender/search/");
         Actions action = new Actions(driver);
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()='Процедура']")));
+//        WebElement element =
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()='Процедура']")));
         driver.findElement(By.xpath("//*[text()='Процедура']")).click();
         WebElement we = driver.findElement(By.xpath("//*[@class='block block-procedure_t']//div[contains(text(),'Допорогові закупівлі')]"));
         action.moveToElement(we).perform();
         driver.findElement(By.xpath("//*[@class='block block-procedure_t']//div[contains(text(),'Допорогові закупівлі')]")).click();
-        WebElement element1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()='Знайдено: ']")));
+//        WebElement element1 =
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()='Знайдено: ']")));
         driver.findElement(By.xpath("(//*[@class='items-list']//*[@class='items-list--header'])[1]")).click();
         Boolean bool = false;
         if(driver.findElements(By.xpath("//*[contains(text(),'Допорогові закупівлі')]")).size() != 0){
